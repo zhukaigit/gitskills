@@ -1,0 +1,22 @@
+t push origin :[远程分支名]
+
+2 本地版本回滚
+git reset --[option] commit_id
+option：mixed | soft | hard ；默认使用mixed
+解释>   mixed：版本回滚，本地代码保留（文件颜色：红色），提交的分支信息保留。
+	soft：版本回滚，本地代码也回滚，提交的分支信息保留。
+	hard：版本回滚，本地代码回滚，提交的分支信息删除。
+
+3 远程版本回滚
+在经过本地版本回滚操作之后，调用：git push -u -f origin HEAD:[origin/远程分支名]
+解释：-f表示强制覆盖
+
+4 本地分支与远程分支关联
+git branch --set-upstream [本地分支名] [origin/远程分支名]
+
+5 git stash 操作
+git stash [save “comment”] ：保存工作区与暂存区的修改，使得工作区间与最近一次的提交一致。
+git stash list：查看本地stash历史
+git stash apply [stash@{id}]：释放该id的修改到工作区，如果不写，则默认是最近一次的stash，该操作不会删除该次stash的历史
+git stash pop [stash@{id}]：释放该id的修改到工作区，如果不写，则默认是最近一次的stash，该操作会删除该次stash的历史
+git stash clear：删除本地stash的历史
