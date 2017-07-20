@@ -1,4 +1,5 @@
-t push origin :[远程分支名]
+1 删除远程分支
+git push origin :[远程分支名]
 
 2 本地版本回滚
 git reset --[option] commit_id
