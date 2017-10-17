@@ -14,6 +14,8 @@ option：mixed | soft | hard ；默认使用mixed
 
 4 本地分支与远程分支关联
 git branch --set-upstream [本地分支名] [origin/远程分支名]
+git branch --set-upstream-to=[origin/远程分支名] 将当前分支与指定远程分支关联
+git branch --unset-upstream 可解除当前所在分支与上游分支的关联
 
 5 git stash 操作
 git stash [save “comment”] ：保存工作区与暂存区的修改，使得工作区间与最近一次的提交一致。
