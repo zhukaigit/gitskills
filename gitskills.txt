@@ -1,4 +1,4 @@
-1 删除远程分支
+﻿1 删除远程分支
 git push origin :[远程分支名]
 
 2 本地版本回滚
@@ -36,3 +36,6 @@ git stash clear：删除本地stash的历史
 	-S 			> 仅显示添加或移除了某个关键字的提交
 	--grep  	> 仅显示含指定关键字的提交
 	--author	> 仅显示指定作者相关的提交。
+
+8 git log date日期格式化
+	如：git log --date=format:"%Y-%m-%d %H:%M:%S"
